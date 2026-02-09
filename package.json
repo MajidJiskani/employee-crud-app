@@ -1,21 +1,18 @@
 {
   "name": "employee-crud-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Employee CRUD Application",
   "main": "main.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js",
     "dev": "nodemon main.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "dotenv": "^17.2.4",
+    "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
-    "express": "^5.1.0",
-    "mongoose": "^9.1.6"
+    "express": "^4.19.2",
+    "mongoose": "^8.10.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.11"
