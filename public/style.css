@@ -1,0 +1,213 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(101, 187, 101);
+}
+
+.emp_form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;  
+    background-color: rgb(110, 230, 170);
+    border-radius: 12px;
+    width: 400px;
+    padding: 20px;
+    margin: 50px auto;
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+    color: rgba(8, 7, 7, 0.767);
+    font-size: 20px;
+    text-align: center;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.row label{
+    width: 120px;
+    font-weight: bold;
+}
+
+.row input{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    color: black;
+    border: 1px solid gray;
+}
+
+.btn{
+    background-color: greenyellow;
+    border: 2px solid rgb(119, 194, 119);
+    border-radius: 8px;
+    padding: 7px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: rgb(185, 255, 120);
+}
+
+.addBtn{
+    padding: 5px;
+    background-color: goldenrod; 
+    width: 100px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    color: black; 
+    text-align: center; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Table styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Table header */
+.table th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Table rows */
+.table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Alternate row coloring */
+.table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover effect on rows */
+.table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Heading styling */
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Add button styling */
+.addBtn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.addBtn:hover {
+    background-color: #45a049;
+}
+
+/* Delete X button */
+.deleteBtn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    background-color: #ff4c4c;  /* bright red */
+    color: #fff;                 /* white X */
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50%;          /* circular button */
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Hover effect */
+.deleteBtn:hover {
+    background-color: #d60000;   /* darker red on hover */
+    transform: scale(1.2);       /* slightly bigger */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+/* Blur background when modal is open */
+/* .blur-bg {
+      filter: blur(6px);
+    pointer-events: none;
+} */
+
+/* Modal background */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Modal box */
+.modal-content {
+    background: white;
+    width: 400px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Close button */
+.closeBtn {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+    color: red;
+}
+
+/* Edit button (✎ icon) */
+.editX {
+    padding: 5px 10px;
+    background: #2ea44f;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.editX:hover {
+    background: #1c7c38;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "employee-crud-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.4",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "mongoose": "^9.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}

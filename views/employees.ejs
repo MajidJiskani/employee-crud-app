@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>All Employees</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <h2>All Employees Records</h2>
+    <!-- <table border="1" cellpadding="8" cellspacing="0"> -->
+    <table class="table ">
+        <tr>
+            <th>Emp ID</th>
+            <th>Name</th>
+            <th>Join Date</th>
+            <th>Salary</th>
+            <th>Language</th>
+            <th>City</th>
+            <th>Is Manager</th>
+        </tr>
+        <% employees.forEach(emp=> { %>
+            <tr>
+                <td>
+                    <%= emp.Emp_id %>
+                </td>
+                <td>
+                    <%= emp.Employee_name %>
+                </td>
+                <td>
+                    <%= emp.Join_Date ? emp.Join_Date.toDateString() : '' %>
+                </td>
+                <td>
+                    <%= emp.Salary %>
+                </td>
+                <td>
+                    <%= emp.language %>
+                </td>
+                <td>
+                    <%= emp.city %>
+                </td>
+                <td>
+                    <%= emp.isManger ? "Yes" : "No" %>
+                </td>
+                <!-- Delete  -->
+                <td>
+                    <a href="/delete/<%= emp._id%>" class="deleteBtn"
+                        onclick="return confirm('Are you sure you want to delete this employee?')">
+                        X
+                    </a>
+                </td>
+                  <td>
+                    <button class="editX" onclick="openEditForm('<%= emp._id %>', '<%= emp.Emp_id %>', '<%= emp.Employee_name %>', '<%= emp.Salary %>', '<%= emp.language %>', '<%= emp.city %>', '<%= emp.isManger %>')">✎</button>
+                    
+                </td>
+                
+                <td>
+                    <p><a href="/" class="addBtn">Add</a></p>
+                </td>
+               
+            </tr>
+            <% }) %>
+    </table>
+    <!-- Update Employee Popup -->
+<div id="editModal" class="modal">
+    <div class="modal-content">
+        <span class="closeBtn" onclick="closeEditForm()">×</span>
+
+        <h2>Edit Employee</h2>
+
+        <form id="editForm" method="POST">
+            <label>Emp ID:</label>
+            <input type="number" name="Emp_id" id="emp_id">
+
+            <label>Name:</label>
+            <input type="text" name="Employee_name" id="emp_name">
+
+            <label>Salary:</label>
+            <input type="number" name="Salary" id="emp_salary">
+
+            <label>Language:</label>
+            <input type="text" name="language" id="emp_language">
+
+            <label>City:</label>
+            <input type="text" name="city" id="emp_city">
+
+            <label>Is Manager:</label>
+            <select name="isManger" id="emp_manager">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+
+            <button type="submit" class="updateBtn">Update</button>
+        </form>
+    </div>
+</div>
+
+<script>
+function openEditForm(id, empId, name, salary, language, city, isManager) {
+    document.getElementById("editModal").style.display = "flex";
+
+    // Blur background
+    document.body.classList.add("blur-bg");
+
+    // Fill form
+    document.getElementById("emp_id").value = empId;
+    document.getElementById("emp_name").value = name;
+    document.getElementById("emp_salary").value = salary;
+    document.getElementById("emp_language").value = language;
+    document.getElementById("emp_city").value = city;
+    document.getElementById("emp_manager").value = isManager;
+
+    // Set form action dynamically
+    document.getElementById("editForm").action = `/update/${id}`;
+}
+
+function closeEditForm() {
+    document.getElementById("editModal").style.display = "none";
+    document.body.classList.remove("blur-bg");
+}
+</script>
+
+
+</body>
+
+</html>
